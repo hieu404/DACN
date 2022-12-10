@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Test List</h3>
+<br><br/>
+<ul>
+{%for item in all_cats %}
+    <li><a class="dropdown-item" href="{%url 'test' item%}">{{item.name}}</a></li>
+
+{%endfor%}
+</ul>
+{% endblock %}
+
